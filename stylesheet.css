@@ -1,0 +1,145 @@
+/* stylesheet.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the footer stays at the bottom of the viewport */
+    background: #001514;
+}
+
+.banner, .navigation, .content, .footer {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+/* banner styling */
+.banner img {
+    background: #06ba63;
+    color: #fbfffe;
+    text-align: center;
+}
+
+/* navigation styling */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Arranges navigation links horizontally */
+    justify-content: space-around;
+    background: #06ba63;
+    font-size: 25px;
+}
+
+h1{
+    border-bottom: solid 2px #06ba63;
+    padding-bottom: 0.5rem;
+    position: relative;
+    color: #fbfffe; /* original color */
+}
+
+/* border setup */
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    background-color: #89fc00;
+}
+
+/* trigger animation on hover */
+h1:hover {
+    color: #89fc00;
+}
+
+h1:hover::after {
+    animation: borderHover 0.3s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes borderHover {
+    to {
+        width: 100%;
+    }
+}
+
+.navigation li a:link {
+    color: #fbfffe;
+    text-decoration: none;
+    border: 5px, solid transparent; /* Initial border is transparent */
+    border-style: solid;
+    border-left-width: 30px;
+    border-right-width: 30px;
+} 
+
+.navigation li a:hover {
+    color: #89fc00;
+    background-color: #001514;
+    border-color: #001514; /* Changes the border color to match the background on hover */
+}
+
+.navigation li a:active {
+    color: #001514;
+    background-color: #89fc00;
+    border-color: #89fc00; /* Changes the border color to match the background on active */
+}
+
+.navigation li a:visited {
+    color: #001514;
+}
+
+.navigation li a:visited:hover {
+    color: #ff3c38;
+    background-color: #001514;
+    border-color: #001514; /* Changes the border color to match the background on hover */
+}
+
+.navigation li a:visited:active {
+    color: #001514;
+    background-color: #ff3c38;
+    border-color: #ff3c38; /* Changes the border color to match the background on active */
+}
+
+/* content styling */
+.content {
+    background: #001514;
+    color: #fbfffe;
+    flex-grow: 1; /* This is key: it expands to fill the available space */
+    padding: 20px;
+    /* You can add a sidebar here using a two-column layout (flexbox or grid) */
+}
+
+a {
+    color:#fbfffe;
+    text-decoration: underline;
+    text-decoration-color: #89fc00;
+}
+
+a:hover {
+    color:#89fc00;
+}
+
+a:visted {
+    text-decoration-color: #ff3c38;
+}
+
+/* footer styling */
+.footer {
+    background: #001514;
+    color: #fbfffe;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    font-family: sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #06ba63;
+    text-decoration-thickness: 2px;
+}
+
