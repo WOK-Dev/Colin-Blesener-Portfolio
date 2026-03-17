@@ -117,6 +117,11 @@ h1:hover::after {
     /* You can add a sidebar here using a two-column layout (flexbox or grid) */
 }
 
+span hr {
+    padding-bottom: 2rem;
+    border: none;
+}
+
 a {
     color:#fbfffe;
     text-decoration: underline;
@@ -125,6 +130,16 @@ a {
 
 a:hover {
     color:#89fc00;
+}
+
+.gmail span {
+    text-decoration: underline;
+    text-decoration-color: #ff3c38;
+    text-decoration-thickness: 2px;
+}
+
+span:not(.gmail span){
+    color:#ff3c38;
 }
 
 a:visted {
