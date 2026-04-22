@@ -92,10 +92,6 @@ h1:hover::after {
     border-color: #89fc00; /* Changes the border color to match the background on active */
 }
 
-.navigation li a:visited {
-    color: #001514;
-}
-
 .navigation li a:visited:hover {
     color: #ff3c38;
     background-color: #001514;
