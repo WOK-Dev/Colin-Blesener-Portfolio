@@ -97,13 +97,6 @@ hr {
     opacity: 0;
 }
 
-hr:hover {
-    opacity: 1;
-    width: 100%;
-    animation: indentReveal 1s forwards ease-in-out, colorFade 2s forwards;
-}
-
-
 
 @keyframes indentReveal {
     0% {
