@@ -16,6 +16,22 @@ body {
     background: #001514;
 }
 
+p {
+    cursor: pointer;
+}
+
+p:hover + hr {
+    opacity: 1;
+    width: 100%;
+    animation: indentReveal 1s forwards ease-in-out, colorFade 2s forwards;
+}
+
+hr:has(+ p:hover) {
+    opacity: 1;
+    width: 100%;
+    animation: indentReveal 1s forwards ease-in-out, colorFade 2s forwards;
+}
+
 .banner, .navigation, .content, .footer {
     padding: 1rem;
     margin: 1rem;
@@ -39,7 +55,7 @@ body {
 }
 
 h1{
-    border-bottom: solid 2px #06ba63;
+    border-bottom: solid 5px #06ba63;
     padding-bottom: 0.5rem;
     position: relative;
     color: #fbfffe; /* original color */
@@ -50,8 +66,8 @@ h1::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px;
-    height: 3px;
+    bottom: -5px;
+    height: 5px;
     width: 0;
     background-color: #89fc00;
 }
@@ -150,6 +166,20 @@ hr:hover {
     /* You can add a sidebar here using a two-column layout (flexbox or grid) */
 }
 
+.disclaimer {
+ color:#ff3c38;
+}
+
+.disclaimer:hover {
+    animation: textColorFade 5s forwards;
+}
+
+
+@keyframes textColorFade {
+ to {
+    color:#89fc00;
+ }
+}
 
 a {
     color:#fbfffe;
